@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle Financeiro</title>
+  <link rel="stylesheet" href="./codigo.css">
+</head>
+<body>
+
+  <h1>Controle de Gastos</h1>
+
+  <form id="formGasto">
+    <input type="text" id="descricao" placeholder="Descrição" required>
+    <input type="number" id="valor" placeholder="Valor" step="0.01" required>
+    
+    <select id="categoria">
+      <option>Alimentação</option>
+      <option>Transporte</option>
+      <option>Lazer</option>
+    </select>
+
+    <button type="submit">Adicionar</button>
+  </form>
+
+  <h2>Total: R$ <span id="total">0.00</span></h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Descrição</th>
+        <th>Categoria</th>
+        <th>Valor</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="lista"></tbody>
+  </table>
+
+  <script src="./main.js"></script>
+</body>
+</html>
